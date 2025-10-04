@@ -1,0 +1,1 @@
+# helper module 5\n\ndef hello():\n    return 'hello from helper_5'\n
