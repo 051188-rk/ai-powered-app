@@ -16,11 +16,11 @@ i tried and implemented all of this but i couldnt get it to deploy.
 ## 🖼️ Screenshots
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test1.png" alt="Test Image 1" width="400">
-  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test2.png" alt="Test Image 2" width="400">
+  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test1.png" alt="Test Image 1" width="800">
+  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test2.png" alt="Test Image 2" width="800">
   <br/>
-  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test3.png" alt="Test Image 3" width="400">
-  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test4.png" alt="Test Image 4" width="400">
+  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test3.png" alt="Test Image 3" width="800">
+  <img src="https://raw.githubusercontent.com/051188-rk/ai-powered-app/main/assets/test4.png" alt="Test Image 4" width="800">
 </div>
 
 ## 🚀 Quick Start
