@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from components.qna import render_qna_ui
 from utils.groq_client import GroqClient
@@ -15,10 +16,20 @@ def render_qna(cfg):
         container = st.empty()
         prompt = QNA_TEMPLATE.format(question=question)
         if model_choice.startswith('groq'):
-            client = GroqClient(api_key=cfg.get('GROQ_API_KEY'))
+            # Try to get API key from both environment and config
+            groq_api_key = os.getenv('GROQ_API_KEY') or cfg.get('GROQ_API_KEY')
+            if not groq_api_key:
+                st.error("GROQ_API_KEY not found. Please set it in your .env file.")
+                return
+            client = GroqClient(api_key=groq_api_key)
             gen = client.chat_stream(model='openai/gpt-oss-20b', messages=[{'role':'user','content':prompt}], temperature=temp)
         else:
-            client = GeminiClient(api_key=cfg.get('GEMINI_API_KEY'))
+            # Try to get API key from both environment and config
+            gemini_api_key = os.getenv('GEMINI_API_KEY') or cfg.get('GEMINI_API_KEY')
+            if not gemini_api_key:
+                st.error("GEMINI_API_KEY not found. Please set it in your .env file.")
+                return
+            client = GeminiClient(api_key=gemini_api_key)
             gen = client.chat_stream(prompt=prompt, temperature=temp)
         full = stream_response(container, gen)
         add_entry('qna', prompt, full)
