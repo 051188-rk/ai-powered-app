@@ -60,3 +60,15 @@ Feel free to submit issues and enhancement requests.
 This project is open source and available under the [MIT License](LICENSE).
 
 my first commit: tried implementing gemini client, groq openai/oss with streamlit but failed, tried debugging using gpt but still failed to do so, will try tomorrow morning
+
+second commit: rechecked groq client integration and api keys, realized i was missing proper environment setup, added .env and re-ran but streamlit still threw client initialization error
+
+third commit: switched focus to gemini client, used official google generativeai library, tried different api key formats and endpoints, kept hitting invalid response errors, checked examples from docs and gpt again
+
+fourth commit: attempted to integrate openai/oss model locally using groq compatibility, refactored function calls but streamlit crashed due to async error, spent time debugging imports and model responses
+
+fifth commit: created a minimal test script to isolate the streaming response logic, finally got partial success where text streamed briefly but stopped midway, realized response parsing issue in callback handler
+
+sixth commit: cleaned up entire codebase, removed redundant clients, unified single llm client setup and refactored app logic, added error handling and proper api key management through .env variables
+
+seventh commit: after multiple trials finally made the chat work smoothly, tested prompt input, response streaming and history persistence successfully, couldn’t deploy at last due to runtime environment mismatch but locally it worked perfectly
